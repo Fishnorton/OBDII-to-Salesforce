@@ -1,6 +1,10 @@
 <template>
     <lightning-card>
-        <!--Panel which contains a bunch of car cards-->
-        <a href={carLink}>Link To The Car</a>
+        <!--Panel which contains a bunch of cars-->
+        <template for:each={cars} for:item="car">
+            <div key={car.Id}>
+                <p>CarId: {car.Id}</p>
+            </div>
+        </template>
     </lightning-card>
 </template>
